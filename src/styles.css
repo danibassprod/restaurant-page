@@ -55,6 +55,7 @@ button:active { filter: brightness(80%); }
         color: white;
         font-size: 2vw;
         font-weight: 200;
+        font-style: italic;
         z-index: 1;
     }
 }
