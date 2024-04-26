@@ -1,17 +1,35 @@
 :root {
     --global-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-color: #ffffff;
-    --top-bottom-backgroundColor:  #252536;
+    --top-bottom-backgroundColor:  #e29200;
+    --bg-color: #E8751A;
 }
 
 body {
     font-family: var(--global-font-family);
     color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.card > img {
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0px #000000;
 }
 
 header {
     height: min(58px, 4vw);
     background-color: var(--top-bottom-backgroundColor);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 2px #00000040;
 }
 
 nav {
@@ -23,20 +41,23 @@ nav {
     > button {
         width: fit-content;
         height: 2vw;
-        background-color: transparent;
+        background-color: #ffb839;
         border: none;
+        border-radius: 5px;
         cursor: pointer;
         color: var(--font-color);
-        font-size: min(1.5rem, 1.2vw)
+        font-size: min(1.5rem, 1.3vw);
+        box-shadow: 0px 0px 3px 1px #00000012;
+    }
+
+    > button:active {
+        box-shadow: 0 0 0px 3px #d38900;
     }
 }
 
-button:hover {
-    filter: brightness(95%);
-    text-decoration: underline;
-}
+button:hover { filter: brightness(98%); }
 
-button:active { filter: brightness(80%); }
+button:active { filter: brightness(96%); }
 
 .top {
     position: relative;
@@ -70,21 +91,25 @@ button:active { filter: brightness(80%); }
     font-size: 1.6vw;
     font-style: italic;
     line-height: 30px;
+    > p {
+        padding: 8%;
+        outline: 4px dashed #f3b380;
+        background: #f9882e;
+    }
 }
 
 .menu {
-    height: 30vw;
-    background-color: rgb(207, 207, 207);
+    background-color: #E5C287;
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 5fr;
-    grid-template-areas: ". text text text ."
-                         ". card1 card2 card3 ."
-                         ;
-    gap: 5px;
-    padding: 0 20%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0fr repeat(2, 1fr);
+    grid-template-areas: "text      text"
+                         "pic       pic"
+                         "pic       pic";
+    gap: 10px 55px;
+    padding: 40px 20%;
     > p {
         grid-area: text;
         color: var(--top-bottom-backgroundColor);
@@ -97,21 +122,7 @@ button:active { filter: brightness(80%); }
 
     >.card {
         width: 100%;
-        height: 50%;
-        background-color: black;
-        border: 1px solid red;
-    }
-
-    > .card:nth-child(2) {
-        grid-area: card1;
-    }
-
-    > .card:nth-child(3) {
-        grid-area: card2;
-    }
-
-    > .card:nth-child(4){
-        grid-area: card3;
+        height: 100%;
     }
 }
 

@@ -1,5 +1,5 @@
-import './reset.css';
-import './styles.css';
+import './css/reset.css';
+import './css/styles.css';
 import homepage from './homepage.js'
 
 homepage();
