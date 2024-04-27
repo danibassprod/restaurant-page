@@ -4,7 +4,6 @@ import pic2 from './img/pexels-catscoming-955137.jpg'
 import pic3 from './img/pexels-jonathanborba-2983101.jpg'
 import pic4 from './img/pexels-picjumbo-com-55570-196643.jpg'
 
-
 export default function renderHomePage(){
     const container = document.querySelector('#container');
 
@@ -41,54 +40,24 @@ export default function renderHomePage(){
     menuPhrase.textContent = 'Lorem ipsum dolor sit amet.';
     menuContainer.appendChild(menuPhrase);
 
-    // card 1
+    // cards
 
-    const card = document.createElement('div');
-    card.classList.add('card');
-    const cardPic = new Image();
-    cardPic.classList.add('pic1');
-    cardPic.src = pic;
+    for (let i = 0; i <= 3; i++){
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-    card.appendChild(cardPic);
+        const cardPic = new Image();
+        cardPic.classList.add('pic1');
+        
+        const cardsPics = [pic, pic2, pic3, pic4]
 
-    // card 2
+        cardPic.src = cardsPics[i];
 
-    const card2 = document.createElement('div');
-    card2.classList.add('card');
-    const cardPic2 = new Image();
-    cardPic2.classList.add('pic2');
-    cardPic2.src = pic2;
-
-    card2.appendChild(cardPic2);
-
-    // card 3 
-
-    const card3 = document.createElement('div');
-    card3.classList.add('card');
-    const cardPic3 = new Image();
-    cardPic3.classList.add('pic3');
-    cardPic3.src = pic3;
-
-    card3.appendChild(cardPic3)
-
-    // card 4
-
-    const card4 = document.createElement('div');
-    card4.classList.add('card');
-    const cardPic4 = new Image();
-    cardPic4.classList.add('pic4');
-    cardPic4.src = pic4;
-
-    card4.appendChild(cardPic4);
-
-    menuContainer.appendChild(card);
-    menuContainer.appendChild(card2);
-    menuContainer.appendChild(card3);
-    menuContainer.appendChild(card4);
-
+        card.appendChild(cardPic);
+        menuContainer.appendChild(card);
+    }
 
     container.appendChild(topContainer);
     container.appendChild(phraseContainer);
     container.appendChild(menuContainer);
 }
-
