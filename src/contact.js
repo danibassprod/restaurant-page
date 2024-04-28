@@ -2,7 +2,7 @@ export default function renderContact() {
     const bodyContainer = document.querySelector('#container');
     
     const contactContainer = document.createElement('div');
-    contactContainer.classList.add('menuContainer');
+    contactContainer.classList.add('sub-container');
     contactContainer.style.width = '80%';
     contactContainer.style.height = '500px';
     contactContainer.style.padding = '1%';
@@ -46,7 +46,6 @@ export default function renderContact() {
         listItem.style.color = 'black';
         listItem.style.cursor = 'pointer';
         ulLinks.appendChild(listItem);
-
     }
 
     // text
@@ -55,6 +54,8 @@ export default function renderContact() {
     text.textContent = 'lorem Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor';
     text.style.color = 'black';
     text.style.fontSize = '1.5vw';
+    text.style.lineHeight = 'min(35px, 4vw)';
+    text.style.margin = '0';
 
     contactContainer.appendChild(title);
     contactContainer.appendChild(ulLinks);

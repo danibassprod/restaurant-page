@@ -4,7 +4,7 @@ export default function renderMenu(){
     const bodyContainer = document.querySelector('#container');
     
     const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menuContainer');
+    menuContainer.classList.add('sub-container')
     menuContainer.style.padding = '5% 10%';
     menuContainer.style.height = '100%';
     menuContainer.style.display = 'grid';

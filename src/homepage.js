@@ -6,6 +6,8 @@ import pic4 from './img/pexels-picjumbo-com-55570-196643.jpg'
 
 export default function renderHomePage(){
     const container = document.querySelector('#container');
+    const homePageContainer = document.createElement('div');
+    homePageContainer.classList.add('sub-container');
 
     // top card
 
@@ -57,7 +59,9 @@ export default function renderHomePage(){
         menuContainer.appendChild(card);
     }
 
-    container.appendChild(topContainer);
-    container.appendChild(phraseContainer);
-    container.appendChild(menuContainer);
+    homePageContainer.appendChild(topContainer);
+    homePageContainer.appendChild(phraseContainer);
+    homePageContainer.appendChild(menuContainer);
+
+    container.appendChild(homePageContainer);
 }
